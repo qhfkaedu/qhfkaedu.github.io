@@ -91,3 +91,178 @@ li {
 .links a:hover {
   opacity: 0.8;
 }
+
+
+/* ─────────────────────────────────────────
+   방명록
+   ───────────────────────────────────────── */
+
+.guestbook {
+  margin-top: 20px;
+}
+
+.guestbook h2 {
+  margin-top: 0;
+}
+
+.gb-lead {
+  margin: 0 0 18px;
+  color: #888;
+  font-size: 14px;
+}
+
+/* ── 입력 ─────────────────────────────── */
+
+.gb-form {
+  display: grid;
+  gap: 10px;
+}
+
+.gb-form input,
+.gb-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e2e2ea;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.gb-form input:focus,
+.gb-form textarea:focus {
+  outline: 2px solid var(--point);
+  outline-offset: 1px;
+  border-color: transparent;
+}
+
+.gb-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.gb-count {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.gb-form button {
+  padding: 10px 24px;
+  background: var(--point);
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.gb-form button:hover {
+  opacity: 0.8;
+}
+
+/* 저장 중에는 눌리지 않습니다 */
+.gb-form button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+/* ── 안내 문구 ────────────────────────── */
+
+.gb-status {
+  margin: 16px 0 0;
+  font-size: 14px;
+  color: #888;
+}
+
+.gb-status.ok  { color: #16a34a; }
+.gb-status.bad { color: #dc2626; }
+
+.gb-status[hidden] { display: none; }
+
+/* ── 남겨진 글 ────────────────────────── */
+
+.gb-list {
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gb-item {
+  padding: 16px 0;
+  border-top: 1px solid #f0f0f4;
+}
+
+.gb-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.gb-meta b {
+  color: #333;
+  font-size: 14px;
+}
+
+.gb-msg {
+  margin: 5px 0 0;
+  /* 줄바꿈을 살리고, 긴 단어는 잘라서 넘치지 않게 합니다 */
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+
+/* ─────────────────────────────────────────
+   좁은 화면
+   ───────────────────────────────────────── */
+
+@media (max-width: 480px) {
+  body {
+    padding: 20px 14px;
+  }
+
+  .card {
+    padding: 26px 20px;
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+
+  .avatar {
+    font-size: 54px;
+  }
+
+  /* 버튼이 손가락에 맞게 폭을 채우고, 높이도 넉넉히 둡니다 */
+  .gb-row {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .gb-form button {
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+
+  /* 입력창 글자를 16px로 두면 iOS에서 화면이 확대되지 않습니다 */
+  .gb-form input,
+  .gb-form textarea {
+    font-size: 16px;
+  }
+
+  .gb-count {
+    text-align: right;
+  }
+
+  .links a {
+    flex: 1;
+    text-align: center;
+  }
+}

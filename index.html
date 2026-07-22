@@ -50,5 +50,28 @@
 
   </main>
 
+  <!-- 방명록 -->
+  <section class="card guestbook">
+
+    <h2>방명록</h2>
+    <p class="gb-lead">다녀가셨다면 한마디 남겨주세요.</p>
+
+    <form class="gb-form" id="gb-form">
+      <input type="text" id="gb-name" placeholder="이름" maxlength="20" required>
+      <textarea id="gb-message" placeholder="한마디 남겨주세요 (200자까지)" maxlength="200" rows="3" required></textarea>
+      <div class="gb-row">
+        <span class="gb-count" id="gb-count">0 / 200</span>
+        <button type="submit" id="gb-submit">남기기</button>
+      </div>
+    </form>
+
+    <p class="gb-status" id="gb-status" role="status" hidden></p>
+
+    <ul class="gb-list" id="gb-list"></ul>
+
+  </section>
+
+  <script type="module" src="guestbook.js"></script>
+
 </body>
 </html>
