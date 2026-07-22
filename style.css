@@ -1,0 +1,93 @@
+/* ─────────────────────────────────────────
+   ✏️ 색깔 바꾸기
+   아래 두 줄만 고치면 페이지 분위기가 바뀝니다.
+   예시 색: #7c5cff(보라) #ff6b6b(빨강) #20b2aa(청록) #f59e0b(주황)
+   ───────────────────────────────────────── */
+:root {
+  --point: #7c5cff;   /* 포인트 색 */
+  --bg: #f4f4f7;      /* 배경 색 */
+}
+
+
+/* 페이지 전체 설정 */
+body {
+  margin: 0;
+  padding: 40px 20px;
+  background: var(--bg);
+  font-family: "Malgun Gothic", "맑은 고딕", sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* 가운데 흰색 카드 */
+.card {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* 이모티콘 프로필 */
+.avatar {
+  font-size: 64px;
+  text-align: center;
+}
+
+/* 이름 */
+h1 {
+  margin: 10px 0 4px;
+  text-align: center;
+  font-size: 32px;
+}
+
+/* 한 줄 소개 */
+.tagline {
+  margin: 0;
+  text-align: center;
+  color: #888;
+}
+
+/* 구분선 */
+hr {
+  margin: 30px 0;
+  border: none;
+  border-top: 1px solid #eee;
+}
+
+/* 소제목 */
+h2 {
+  margin-top: 30px;
+  font-size: 20px;
+  color: var(--point);
+}
+
+/* 목록 */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* 링크 버튼 */
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.links a {
+  padding: 10px 20px;
+  background: var(--point);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+/* 마우스를 올렸을 때 */
+.links a:hover {
+  opacity: 0.8;
+}
